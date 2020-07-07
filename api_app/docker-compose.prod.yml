@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    platformtracker_api:
+        restart: always
+        ports:
+            - "3000:3000"
+        command: npm start
+
+    platformtracker_db:
+        restart: always
+
+    

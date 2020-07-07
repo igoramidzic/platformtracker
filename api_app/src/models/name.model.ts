@@ -1,11 +1,11 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 export type NameDocument = mongoose.Document & {
-    name: string
+    name: string;
 }
 
 const nameSchema = new mongoose.Schema({
     name: String
-}, { timestamps: true })
+}, { timestamps: true });
 
-export const Name = mongoose.model<NameDocument>("Name", nameSchema)
+export const Name = mongoose.model<NameDocument>("Name", nameSchema);

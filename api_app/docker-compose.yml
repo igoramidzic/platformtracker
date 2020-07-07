@@ -7,12 +7,8 @@ services:
             dockerfile: Dockerfile
         image: platformtracker_api
         container_name: platformtracker_api
-        restart: unless-stopped
         ports:
             - "3000:3000"
-        volumes:
-            - .:/usr/src/app
-            - node_modules:/usr/src/platformtracker_api/node_modules
         networks:
             - backend
         depends_on:
@@ -23,13 +19,9 @@ services:
         ports:
             - "27017:27017"
         container_name: platformtracker_db
-        restart: unless-stopped
         networks:
             - backend
 
 networks:
     backend:
         driver: bridge
-
-volumes:
-    node_modules:

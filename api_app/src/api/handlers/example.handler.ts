@@ -1,8 +1,8 @@
-import { NameDocument, Name } from '../../models/name.model';
+import { NameDocument, Name } from "../../models/name.model";
 
-export let getExample = async (): Promise<NameDocument> => {
+export const getExample = async (): Promise<NameDocument> => {
     return new Promise((resolve, reject) => {
-        Name.create({ name: 'Igor Amidzic' })
+        Name.create({ name: "Igor Amidzic" })
             .then(async (name: NameDocument) => {
                 resolve(name);
             })
@@ -16,13 +16,13 @@ export let getExample = async (): Promise<NameDocument> => {
         //     else
         //         reject("50% Failure")
         // }, 1000)
-    })
-}
+    });
+};
 
-export let getNames = async (): Promise<NameDocument[]> => {
+export const getNames = async (): Promise<NameDocument[]> => {
     return new Promise((resolve, reject) => {
         Name.find()
             .then((docs: NameDocument[]) => resolve(docs))
             .catch((err) => reject(err));
-    })
-}
+    });
+};
