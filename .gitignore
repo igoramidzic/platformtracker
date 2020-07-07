@@ -86,3 +86,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+docker-compose.*.yml

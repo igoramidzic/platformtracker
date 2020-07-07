@@ -7,12 +7,3 @@ services:
             dockerfile: Dockerfile
         image: platformtracker_web
         container_name: platformtracker_web
-        restart: unless-stopped
-        ports:
-            - "80:4200"
-        volumes:
-            - .:/usr/src/app
-            - node_modules:/usr/src/platformtracker_web/node_modules
-
-volumes:
-    node_modules:
